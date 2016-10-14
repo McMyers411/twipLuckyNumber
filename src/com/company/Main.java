@@ -18,25 +18,29 @@ public class Main {
 
             System.out.println("Well then " + username + ", your lucky number is " + luck);
             list1.add(username + "" + luck);
-            System.out.println("If you would like to end the program, enter 0. \nIf you would like view a name list, enter 1.\n" +
-                    "If you would like to enter a new name, enter 2.\n  ");
 
-            int num = in2.nextInt();
-            while (num < 0 || num >2)
-            {
-                System.out.println("Please input either 0, 1, or 2");
-                num = in2.nextInt();
+            String num = "10";
+            while (Integer.parseInt(num) < 0 || Integer.parseInt(num) > 2) {
+                System.out.println("If you would like to end the program, enter 0. \nIf you would like view a name list, enter 1.\n" +
+                        "If you would like to enter a new name, enter 2.\n  ");
+                num = in2.next();
+                if (num.equals("0") || num.equals("1") || num.equals("2")) {
+
+                    // Do Nothing
+
+                } else {
+                    num = "10";
+                }
             }
-            if (num == 0){
-                break;
-            }
-            else if (num == 1){
-                System.out.println(list1);
-                break;
-            }
+                if (Integer.parseInt(num) == 0) {
+                    break;
+                }
+                else if (Integer.parseInt(num) == 1) {
+                    System.out.println(list1);
+                    break;
+                }
+
 
         }
-
-
     }
 }
