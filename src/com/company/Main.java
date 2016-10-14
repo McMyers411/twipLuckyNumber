@@ -22,6 +22,11 @@ public class Main {
                     "If you would like to enter a new name, enter 2.\n  ");
 
             int num = in2.nextInt();
+            while (num < 0 || num >2)
+            {
+                System.out.println("Please input either 0, 1, or 2");
+                num = in2.nextInt();
+            }
             if (num == 0){
                 break;
             }
